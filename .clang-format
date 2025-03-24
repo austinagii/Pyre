@@ -1,0 +1,31 @@
+---
+# options: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+BasedOnStyle: LLVM
+IndentWidth: 2
+# Must be 80 characters or less!
+ColumnLimit: 80
+# does (int) x instead of (int)x
+SpaceAfterCStyleCast: true
+# spaces, not tabs!
+UseTab: Never
+# if (x) doStuff()  is not allowed, bad style
+AllowShortIfStatementsOnASingleLine: false
+# 
+AlignTrailingComments: true
+SpacesBeforeTrailingComments: 2
+#  #define SHORT_NAME       42
+#  #define LONGER_NAME      0x007f   # does nice spacing for macros
+AlignConsecutiveMacros: Consecutive
+# use \n instead of \r\n
+UseCRLF: false
+
+# Align pointers like `Tensor* tensor` rather than `Tensor *tensor`
+DerivePointerAlignment: false
+PointerAlignment: Left
+
+# Never split return type onto new line
+AlwaysBreakAfterReturnType: None
+# Prevent line-wrapping of return types
+PenaltyReturnTypeOnItsOwnLine: 1000
+# Increase tolerance for longer lines before breaking
+PenaltyExcessCharacter: 100
